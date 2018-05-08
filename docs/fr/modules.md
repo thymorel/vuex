@@ -278,9 +278,9 @@ Parfois nous devrons créer de multiples instances d'un module pour, par exemple
 - créer plusieurs stores qui utilisent le même module (par ex. pour [éviter les singletons d'état avec du SSR](https://ssr.vuejs.org/fr/structure.html#avoid-stateful-singletons) quand l'option `runInNewContext` est à `false` ou `'once'`) ou
 - enregistrer le même module plusieurs fois dans le même store.
 
-Si nous utilisons un objet pour déclarer l'état du module, alors cet objet d'état sera partagé par référence et causera de contamination inter store/module quand il sera muté.
+Si nous utilisons un objet pour déclarer l'état du module, alors cet objet d'état sera partagé par référence et causera une contamination inter store/module quand il sera muté.
 
-C'est exactement le même problème qu'avec `data` dans un composant Vue. Ainsi la solution est là même, utiliser une fonction pour déclarer notre état de module (supporté par la 2.3.0+) :
+C'est exactement le même problème qu'avec `data` dans un composant Vue. Ainsi la solution est la même, utiliser une fonction pour déclarer notre état de module (supporté par la 2.3.0+) :
 
 ``` js
 const MyReusableModule = {
