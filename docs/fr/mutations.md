@@ -16,7 +16,7 @@ const store = new Vuex.Store({
 })
 ```
 
-Vous ne pouvez pas appeler directement un gestionnaire de mutation. Le parti-pris ici est proche de l'abonnement à un évènement : « Lorsqu'une mutation du type `increment` est déclenchée, appelle ce gestionnaire. » Pour invoquer un gestionnaire de mutation, il faut appeler `store.commit` avec son type :
+Vous ne pouvez pas appeler directement un gestionnaire de mutation. Le parti pris ici est proche de l'abonnement à un évènement : « Lorsqu'une mutation du type `increment` est déclenchée, appelle ce gestionnaire. » Pour invoquer un gestionnaire de mutation, il faut appeler `store.commit` avec son type :
 
 ``` js
 store.commit('increment')
@@ -66,7 +66,7 @@ store.commit({
 })
 ```
 
-Lors de l'utilisation d'un objet pour acter, c'est l'objet lui-même qui ferra office d'argument pour aux gestionnaires de mutation, le gestionnaire reste donc inchangé :
+Lors de l'utilisation d'un objet pour acter, c'est l'objet lui-même qui fera office d'argument pour les gestionnaires de mutation, le gestionnaire reste donc inchangé :
 
 ``` js
 mutations: {
